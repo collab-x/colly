@@ -783,9 +783,9 @@ func (c *Collector) OnResponse(f ResponseCallback) {
 // GoQuery Selector is a selector used by https://github.com/PuerkitoBio/goquery
 func (c *Collector) OnHTML(goquerySelector string, f HTMLCallback) {
 	c.lock.Lock()
-	if c.htmlCallbacks == nil {
-		c.htmlCallbacks = make([]*htmlCallbackContainer, 0, 4)
-	}
+	//if refresh is true then refresh the map
+	c.htmlCallbacks = make([]*htmlCallbackContainer, 0, 4)
+
 	c.htmlCallbacks = append(c.htmlCallbacks, &htmlCallbackContainer{
 		Selector: goquerySelector,
 		Function: f,
