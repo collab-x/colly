@@ -46,6 +46,7 @@ import (
 	"github.com/kennygrant/sanitize"
 	"github.com/temoto/robotstxt"
 	"google.golang.org/appengine/urlfetch"
+	x "github.com/collab-x/colly"
 )
 
 // A CollectorOption sets an option on a Collector.
