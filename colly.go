@@ -41,12 +41,11 @@ import (
 	"github.com/PuerkitoBio/goquery"
 	"github.com/antchfx/htmlquery"
 	"github.com/antchfx/xmlquery"
-	"github.com/gocolly/colly/v2/debug"
-	"github.com/gocolly/colly/v2/storage"
+	"github.com/collab-x/colly/debug"
+	"github.com/collab-x/colly/storage"
 	"github.com/kennygrant/sanitize"
 	"github.com/temoto/robotstxt"
 	"google.golang.org/appengine/urlfetch"
-	x "github.com/collab-x/colly"
 )
 
 // A CollectorOption sets an option on a Collector.
@@ -369,7 +368,7 @@ func Debugger(d debug.Debugger) CollectorOption {
 // Init initializes the Collector's private variables and sets default
 // configuration for the Collector
 func (c *Collector) Init() {
-	c.UserAgent = "colly - https://github.com/gocolly/colly/v2"
+	c.UserAgent = "colly - https://github.com/collab-x/colly/"
 	c.MaxDepth = 0
 	c.store = &storage.InMemoryStorage{}
 	c.store.Init()

@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/gocolly/colly/v2"
-	"github.com/gocolly/colly/v2/debug"
+	"github.com/collab-x/colly/"
+	"github.com/collab-x/colly//debug"
 )
 
 func main() {
